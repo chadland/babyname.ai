@@ -1,2 +1,3 @@
-# babyname.ai
+# Babyname.ai
+
 AI service to generate creative baby names
