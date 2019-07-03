@@ -1,5 +1,9 @@
 
-![alt text](Html/images/logo.PNG)
+
+<p align="center">
+<img src="Html/images/logo.PNG">
+</p>
+
 
 # Babyname.ai
 
