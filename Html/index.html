@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="babyname.ai">
+	
+	<meta property="og:url"                content="https://babyname.ai"/>
+	<meta property="og:keywords"           content="baby names,baby-names,AI,PyTorch,AWS,RNN,Deep Learning, create baby names" />
+	<meta property="og:title"              content="Babyname.ai - AI Generated Baby Names" />
+	<meta property="og:description"        content="An AI service to generate creative baby names" />
+	<meta property="og:image"              content="https://s3.eu-central-1.amazonaws.com/babyname.ai/images/babynamedotai.PNG" />
+	<meta property="og:type"               content="website" />
+	
+	
+	<meta name="twitter:title" content="Babyname.ai - AI Generated Baby Names ">
+	<meta name="twitter:description" content="An AI service to generate creative baby names">
+	<meta name="twitter:image" content=" https://s3.eu-central-1.amazonaws.com/babyname.ai/images/babynamedotai.PNG">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<link rel="icon" href="https://s3.eu-central-1.amazonaws.com/babyname.ai/images/icon.PNG">			
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="s003">
+      <form>
+		<div id="image">
+			<picture>
+				<source media="(min-width: 767px)" srcset="images/logo.PNG" class="center"/>
+				<img src="images/smallogo.PNG" class="center" />
+			</picture>
+			<br>
+		</div>
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+            <div class="input-select">
+			  <select data-trigger="" name="choices-single-default"></select>
+              </select>
+            </div>
+          </div>
+          <div class="input-field second-wrap">
+            <input id="search" type="text" placeholder="Enter a name you like (e.g your own name)?" />
+          </div>
+          <div class="input-field third-wrap">
+            <button class="btn-search">
+              <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+		<div id="loadingDiv">
+				<br>
+				<div class="overlay-loader">
+					<div class="loader">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		<div class="results1" id="resultsDiv">
+			<br>
+			<ul class="list" id="resultlist">
+			</ul>
+			<div id="loadMore"><i class="fas fa-search-plus"> </i>&nbsp Show more results </div>
+			<br>
+			<div id="showLess"><i class="fas fa-search-minus"> </i>&nbsp Show less results </div>
+		</div>
+		<div>
+			<br>
+			<button class="collapsible active"  type="button"><span class="settingstext">Settings</span></button>
+				<div class="content" style="max-height: 108px;">
+				  <div class="slidecontainer">
+					<p class="slidertext" id="creativityparameter">Name Creativity (higer value -> more unique):<span style="float: right"><span id="demo"></span>/100</span></p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+					<span><br><br> </span>
+				 </div>
+				</div>
+	    </div>
+		<div>
+			<br>
+			<button class="collapsible" type="button"><span class="settingstext">Favorites</span></button>
+				<div class="content" id="favorite">
+					<p class="slidertext" id="nofavoritestext">There are no favorites stored at the momnent</p>
+					<ul id="favoriteList" class="list">
+					</ul>
+					<div id="copyfavoritelinklocation" class="copyfavoritelist" ><i class="far fa-clipboard"></i>&nbsp Copy Favorite List Link Location </div>
+					<span><br></span>
+				</div>
+	    </div>
+		<div class="contact" id="emailfooter">
+			<br>
+			<br>
+			<a href="mailto:info@babyname.ai">Contact us <i class="fas fa-envelope"></i> &nbsp;info@babyname.ai</a>
+
+		</div>
+      </form>
+    </div>
+	<script src="js/config.js"></script>
+    <script src="js/extention/choices.js"></script>
+	<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+	<script src="js/collapse.js"></script>
+	<script src="js/rangeslider.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/pagefunctionality.js"></script>
+	<script src="js/helper.js"></script>
+	<script src="js/text.js"></script>
+
+  </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
