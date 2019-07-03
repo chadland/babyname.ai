@@ -1,3 +1,6 @@
+
+![alt text](https://raw.githubusercontent.com/chadland/babyname.ai/Html/images/logo.PNG/images/logo.PNG)
+
 # Babyname.ai
 
 AI service to generate creative baby names
