@@ -1,5 +1,5 @@
 
-![alt text](https://raw.githubusercontent.com/chadland/babyname.ai/Html/images/logo.PNG/images/logo.PNG)
+![alt text](Html/images/logo.PNG)
 
 # Babyname.ai
 
