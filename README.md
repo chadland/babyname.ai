@@ -1,7 +1,7 @@
 
 
 <p align="center">
-<img src="Html/images/logo.PNG">
+<img src="Html/images/Babyname-logo-unavn-web">
 </p>
 
 
